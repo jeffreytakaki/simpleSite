@@ -2,15 +2,18 @@ version: '3.8'
 
 services:
   frontend:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "5000:5001"
     networks:
       - mynetwork
       
-    
 networks:
   mynetwork:
     name: mynetwork
     external: false
+
+
 
