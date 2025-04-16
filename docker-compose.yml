@@ -5,9 +5,12 @@ services:
     build: .
     ports:
       - "5000:5001"
+    networks:
+      - mynetwork
+      
     
-  networks:
-    mynetwork:
-      name: mynetwork
-      external: false
+networks:
+  mynetwork:
+    name: mynetwork
+    external: false
 
